@@ -1,0 +1,126 @@
+/**
+ * @theme  antique watches
+ * @version 1.0.1.
+ * @framework Bootstrap - https://getbootstrap.com/
+ * @naming B.E.M. - http://getbem.com/naming/
+ * @author Mualim Adnan Krisztián
+ */
+
+/**
+ * @theme antique watches
+ * @section html
+ */
+html {}
+
+/**
+  * @theme antique watches
+  * @section body
+  */
+body {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/**
+ Form-control
+ */
+
+.form-control {
+  border: 0;
+  border-radius: 0;
+}
+
+.form-control:focus {
+  outline: none;
+  border-radius: 0;
+}
+
+/**
+ Header elements 
+ */
+
+#header {
+  padding: 0;
+}
+
+.header__container__main__navbar__navbar-toggler:focus {
+  outline: 2px auto #4c3d38;
+  border-radius: 0;
+}
+
+.header__container__main__box {
+  background: #2d2822;
+  min-height: 150px;
+  padding: 0 70px;
+}
+
+.header__container__main__navbar {
+  position: relative;
+  top: 2.8em;
+}
+
+/**
+ Carousel elements 
+ */
+
+.carousel-item {
+  height: 600px;
+  background-position: center;
+  background-image: url('../../../../images/content/carousel/DSCN5583.JPG');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-caption .input-group {
+  position: relative;
+  bottom: 235px;
+}
+
+.carousel-caption .form-control {
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 50px;
+}
+
+.btn-search {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0;
+  color: #fff;
+  height: 50px;
+}
+
+.btn-search:link,
+.btn-search:visited {
+  color: #fff;
+}
+
+.btn-search:active,
+.btn-search:hover {
+  background: #4c3d38;
+  color: #fff;
+}
+
+.carousel-indicators li {
+  width: 5px;
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.carousel-indicators>.active {
+  background-color: #8d6e46;
+}
+
+@media screen and (max-width: 990px) {
+  .header__container__main__navbar {
+    top: 0;
+  }
+
+  .header__container__main__navbar__navbar-toggler {
+    position: relative;
+    top: 1em;
+  }
+}
