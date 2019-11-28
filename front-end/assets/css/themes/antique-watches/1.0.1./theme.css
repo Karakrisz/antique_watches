@@ -73,7 +73,7 @@ body {
  */
 
 .header__container__navbar__nav__elem__link {
-  padding: 5px 30px;
+  padding: 10px 30px;
   color: white;
 }
 
@@ -81,6 +81,10 @@ body {
   color: #8d6e46;
 }
 
+.status-active {
+  border: 2px solid #8d6e46;
+  border-radius: 5px;
+}
 
 /**
  Carousel elements 
@@ -125,7 +129,7 @@ body {
 }
 
 .carousel__caption__login__content__elem__link--registration-button {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .carousel-caption .input-group {
