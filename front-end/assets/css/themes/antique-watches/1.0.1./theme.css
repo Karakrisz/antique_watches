@@ -86,13 +86,13 @@ body {
   color: white;
 }
 
-.header__container__navbar__nav__elem__link:hover {
-  color: #8d6e46;
-}
-
-.status-active {
+.header__container__navbar__nav__elem__link:focus {
   border: 2px solid #8d6e46;
   border-radius: 5px;
+}
+
+.header__container__navbar__nav__elem__link:hover {
+  color: #8d6e46;
 }
 
 /**
