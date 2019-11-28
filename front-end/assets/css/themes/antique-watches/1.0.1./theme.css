@@ -59,7 +59,7 @@ body {
 
 .header__container__box {
   background: #2d2822;
-  min-height: 150px;
+  height: 150px;
   padding: 0 70px;
 }
 
@@ -71,6 +71,10 @@ body {
 /**
  Navbar elements 
  */
+
+.header__container__main__navbar__navbar-toggler {
+  position: relative;
+}
 
 .header__container__navbar__nav__elem__link {
   padding: 10px 30px;
@@ -89,6 +93,10 @@ body {
 /**
  Carousel elements 
  */
+
+.carousel {
+  position: relative;
+}
 
 .carousel a {
   text-decoration: none;
@@ -170,13 +178,72 @@ body {
   background-color: #8d6e46;
 }
 
-@media screen and (max-width: 990px) {
-  .header__container__navbar {
+@media screen and (min-width: 480px) and (max-width: 990px) {
+
+  /**
+ Header elements 
+ */
+  .header__container__box {
+    height: auto;
+    padding: 0 10px;
+  }
+
+  .header__container__box__navbar {
     top: 0;
   }
 
   .header__container__main__navbar__navbar-toggler {
-    position: relative;
     top: 1em;
   }
+
+  /**
+ Carousel elements 
+ */
+
+  .carousel {
+    bottom: 5px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  /**
+ Header elements 
+ */
+  .header__container__box {
+    height: auto;
+    padding: 0 10px;
+  }
+
+  .header__container__box__navbar {
+    top: 0;
+  }
+
+  .header__container__main__navbar__navbar-toggler {
+    top: 1em;
+  }
+
+  /**
+ Carousel elements 
+ */
+
+
+  .carousel {
+    bottom: 5px;
+  }
+
+  .carousel-item {
+    height: 350px;
+  }
+
+  .carousel__caption__login__content {
+    bottom: 105px;
+  }
+
+  .carousel-caption .input-group {
+    position: relative;
+    bottom: 110px;
+  }
+
 }
