@@ -20,7 +20,6 @@ html {}
 body {
   max-width: 1400px;
   margin: auto;
-  height: 3000px;
 }
 
 /**
@@ -174,6 +173,10 @@ body {
   color: #fff;
 }
 
+.fa-search {
+  font-size: 40px;
+}
+
 .carousel-indicators li {
   width: 5px;
   padding: 3px;
@@ -183,6 +186,22 @@ body {
 .carousel-indicators .active {
   background-color: #8d6e46;
 }
+
+/**
+ Photo gallery
+ */
+#photo-gallery {
+  padding: 0;
+}
+
+.photo-gallery__container {
+  background-color: #4c3d38;
+  height: 500px;
+  position: relative;
+  top: 9em;
+  text-align: center;
+}
+
 
 @media screen and (min-width: 480px) and (max-width: 990px) {
 
