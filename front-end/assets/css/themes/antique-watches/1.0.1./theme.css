@@ -65,11 +65,110 @@ body {
   z-index: 10000;
   width: 100%;
   max-width: 1400px;
+  transition: 0.5s;
+}
+
+/* header bottom shadow off */
+.header__container__box.header__container__box__bottom-shadow-off {
+  box-shadow: 0;
+}
+
+/* header bottom shadow on */
+
+.header__container__box.header__container__box__bottom-shadow-on {
+  box-shadow: 0px 15px 20px white;
 }
 
 .header__container__box__navbar {
   position: relative;
   top: 2.8em;
+}
+
+/* header bottom circle (style) */
+
+.header__container__box__navbar--circle {
+  text-align: center;
+}
+
+.header__container__box__navbar--circle ul {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+}
+
+.header__container__box__navbar--circle li {
+  float: left;
+  margin-right: 30px;
+
+}
+
+.header__container__box__navbar--circle li:last-child,
+.header__container__box__navbar--circle li:last-child {
+  margin-right: 0;
+}
+
+.header__container__box__navbar--circle a {
+  font-size: 25px;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  color: white;
+  font-family: 'Shadows Into Light Two', cursive;
+  /* font-family: 'Indie Flower', cursive; */
+}
+
+.header__container__box__navbar--circle a:before,
+.header__container__box__navbar--circle a:after {
+  content: " ";
+  position: absolute;
+  display: inline-block;
+  width: 110px;
+  height: 110px;
+  top: 50%;
+  left: 50%;
+  margin-top: -55px;
+  margin-left: -55px;
+  border-radius: 50%;
+  border: 2px solid #8d6e46;
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.header__container__box__navbar--circle a:before {
+  -webkit-transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+  -moz-transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+  transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+  opacity: 0;
+  /* -webkit-transform: rotate3d(1, 1, 0, 270deg);*/
+
+}
+
+.header__container__box__navbar--circle a:after {
+  -webkit-transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg);
+  -moz-transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg);
+  transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg);
+  /* -webkit-transform: rotate3d(0, 1, 0, -270deg);*/
+}
+
+
+
+.header__container__box__navbar--circle a:hover:before {
+  -webkit-transform: rotateX(360deg) rotateY(0deg) rotateZ(-180deg);
+  -moz-transform: rotateX(360deg) rotateY(0deg) rotateZ(-180deg);
+  transform: rotateX(360deg) rotateY(0deg) rotateZ(-180deg);
+  opacity: 1;
+  transition: all 1s ease;
+  /* -webkit-transform: rotate3d(0, 0, 0, 0deg); */
+
+}
+
+.header__container__box__navbar--circle a:hover:after {
+  -webkit-transform: rotateX(360deg) rotateY(0deg) rotateZ(-180deg);
+  -moz-transform: rotateX(360deg) rotateY(0deg) rotateZ(-180deg);
+  transform: rotateX(360deg) rotateY(0deg) rotateZ(-180deg);
+  transition: all 1.5s ease;
+  opacity: 1;
+  /* -webkit-transform: rotate3d(0, 0, 0, 0deg); */
 }
 
 /**
@@ -84,16 +183,6 @@ body {
   padding: 10px 30px;
   color: white;
 }
-
-.header__container__navbar__nav__elem__link:focus {
-  border: 2px solid #8d6e46;
-  border-radius: 5px;
-}
-
-.header__container__navbar__nav__elem__link:hover {
-  color: #8d6e46;
-}
-
 
 /**
  Carousel elements 
@@ -116,7 +205,7 @@ body {
 .carousel-item {
   height: 550px;
   background-position: center;
-  background-image: url('../../../../images/content/carousel/DSCN5583.JPG');
+  background-image: url('../../../../images/content/carousel/DSCN5615.JPG');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -140,6 +229,8 @@ body {
   background-color: #8d6e46;
   color: white;
   padding-top: 12px;
+  font-size: 20px;
+  font-family: 'Indie Flower', cursive;
 }
 
 .carousel__caption__login__content__elem__link--registration-button {
@@ -211,12 +302,25 @@ body {
 
 .photo-gallery__container__navigation__part {
   position: relative;
-  top: 8em;
+  top: 6em;
 }
 
 .photo-gallery__container__navigation__part h3 {
+  position: relative;
+  bottom: 10px;
   color: white;
   padding: 30px;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+
+.photo-gallery__container__navigation__part__content__div {
+  margin-right: 30px;
+  border-bottom: 2px solid black;
+}
+
+.photo-gallery__container__navigation__part__content__div:hover {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 25px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -225,13 +329,62 @@ body {
   bottom: 20px;
 }
 
-.photo-gallery__container__navigation__part__content__div {
-  margin-right: 30px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 .photo-gallery__container__navigation__part__content__div--margin-right-off {
   margin-right: 0;
+}
+
+
+/**
+ References elements 
+ */
+
+#references {
+  padding: 0;
+}
+
+.references__container__box {
+  background: #ededed;
+  position: relative;
+  top: 9em;
+  text-align: center;
+  padding: 0 70px;
+}
+
+.references__container__box h1 {
+  padding-top: 30px;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.references__container__box__content img {
+  border-radius: 50%;
+  margin: 20px 0;
+}
+
+/* footer  */
+
+#footer {
+  padding: 0;
+}
+
+.footer__container__content {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  position: relative;
+  top: 9em;
+  height: 500px;
+  background: #855f36;
+  padding: 40px 70px;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.footer__container__content__relationship-content {
+  text-align: center;
+  color: white;
 }
 
 
@@ -282,6 +435,22 @@ body {
     margin-right: 10px;
     margin-top: 50px;
     margin-bottom: 20px;
+    border: 0;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 25px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  /**
+ References elements 
+ */
+
+  .references__container__box {
+    top: 3em;
+    padding: 0 30px;
+  }
+
+  .footer__container__content {
+    top: 3em;
+    padding: 40px 30px;
   }
 
 }
@@ -294,7 +463,7 @@ body {
   .header__container__box {
     height: auto;
     padding: 0 10px;
-    position: relative;
+    position: fixed;
   }
 
   .header__container__box__navbar {
@@ -309,7 +478,7 @@ body {
  Carousel elements 
  */
   .carousel {
-    top: -0.3em;
+    top: 0em;
   }
 
   .carousel-item {
@@ -317,12 +486,12 @@ body {
   }
 
   .carousel__caption__login__content {
-    bottom: 105px;
+    bottom: 40px;
   }
 
   .carousel-caption .input-group {
     position: relative;
-    bottom: 110px;
+    bottom: 30px;
   }
 
   /**
@@ -349,6 +518,19 @@ body {
   .photo-gallery__container__navigation__part__content__div {
     margin-right: 0px;
     margin-bottom: 50px;
+    border: 0;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 25px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .references__container__box {
+    top: -1em;
+    padding: 0 30px;
+  }
+
+  .footer__container__content {
+    top: -1em;
+    padding: 40px 10px;
   }
 
 }
+
