@@ -31,6 +31,15 @@ body {
 }
 
 /**
+ text-truncate img gallery
+ */
+
+
+.text-truncate {
+  display: none;
+}
+
+/**
  Form-control
  */
 
@@ -80,34 +89,33 @@ body {
 }
 
 .header__container__box__navbar {
-  position: relative;
-  top: 2.8em;
+  bottom: 0px;
 }
 
 /* header bottom circle (style) */
 
-.header__container__box__navbar--circle {
+.navbar-collapse--circle {
   text-align: center;
 }
 
-.header__container__box__navbar--circle ul {
+.navbar-collapse--circle ul {
   display: inline-block;
   list-style-type: none;
   padding: 0;
 }
 
-.header__container__box__navbar--circle li {
+.navbar-collapse--circle li {
   float: left;
   margin-right: 30px;
 
 }
 
-.header__container__box__navbar--circle li:last-child,
-.header__container__box__navbar--circle li:last-child {
+.navbar-collapse--circle li:last-child,
+.navbar-collapse--circle li:last-child {
   margin-right: 0;
 }
 
-.header__container__box__navbar--circle a {
+.navbar-collapse--circle a {
   font-size: 25px;
   text-decoration: none;
   display: inline-block;
@@ -117,8 +125,8 @@ body {
   /* font-family: 'Indie Flower', cursive; */
 }
 
-.header__container__box__navbar--circle a:before,
-.header__container__box__navbar--circle a:after {
+.navbar-collapse--circle a:before,
+.navbar-collapse--circle a:after {
   content: " ";
   position: absolute;
   display: inline-block;
@@ -134,7 +142,7 @@ body {
   transition: all 2s ease;
 }
 
-.header__container__box__navbar--circle a:before {
+.navbar-collapse--circle a:before {
   -webkit-transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
   -moz-transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
   transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
@@ -143,7 +151,7 @@ body {
 
 }
 
-.header__container__box__navbar--circle a:after {
+.navbar-collapse--circle a:after {
   -webkit-transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg);
   -moz-transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg);
   transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg);
@@ -152,7 +160,7 @@ body {
 
 
 
-.header__container__box__navbar--circle a:hover:before {
+.navbar-collapse--circle a:hover:before {
   -webkit-transform: rotateX(360deg) rotateY(0deg) rotateZ(-180deg);
   -moz-transform: rotateX(360deg) rotateY(0deg) rotateZ(-180deg);
   transform: rotateX(360deg) rotateY(0deg) rotateZ(-180deg);
@@ -162,7 +170,7 @@ body {
 
 }
 
-.header__container__box__navbar--circle a:hover:after {
+.navbar-collapse--circle a:hover:after {
   -webkit-transform: rotateX(360deg) rotateY(0deg) rotateZ(-180deg);
   -moz-transform: rotateX(360deg) rotateY(0deg) rotateZ(-180deg);
   transform: rotateX(360deg) rotateY(0deg) rotateZ(-180deg);
@@ -174,6 +182,15 @@ body {
 /**
  Navbar elements 
  */
+
+.navbar-collapse {
+  position: relative;
+  bottom: 20px;
+}
+
+.navbar-brand {
+  padding-top: 5px;
+}
 
 .header__container__main__navbar__navbar-toggler {
   position: relative;
@@ -205,9 +222,20 @@ body {
 .carousel-item {
   height: 550px;
   background-position: center;
-  background-image: url('../../../../images/content/carousel/DSCN5615.JPG');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.carousel-item-image-1 {
+  background-image: url('../../../../images/content/carousel/031.JPG');
+}
+
+.carousel-item-image-2 {
+  background-image: url('../../../../images/content/carousel/IMGP0083.JPG');
+}
+
+.carousel-item-image-3 {
+  background-image: url('../../../../images/content/carousel/DSCN4409.JPG');
 }
 
 .carousel-caption a:hover {
@@ -355,8 +383,11 @@ body {
   font-family: 'Cinzel Decorative', cursive;
 }
 
+.references__container__box h3 {
+  font-family: 'Indie Flower', cursive;
+}
+
 .references__container__box__content img {
-  border-radius: 50%;
   margin: 20px 0;
 }
 
@@ -403,6 +434,11 @@ body {
   }
 
   .header__container__main__navbar__navbar-toggler {
+    top: 1em;
+  }
+
+  .navbar-brand {
+    position: relative;
     top: 1em;
   }
 
@@ -470,6 +506,14 @@ body {
     top: 0;
   }
 
+  .navbar-collapse {
+    bottom: 0px;
+  }
+
+  .header__container__box__navbar img {
+    display: none;
+  }
+
   .header__container__main__navbar__navbar-toggler {
     top: 1em;
   }
@@ -533,4 +577,3 @@ body {
   }
 
 }
-
